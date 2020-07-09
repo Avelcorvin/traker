@@ -11,8 +11,14 @@ app.get('/',(req,res)=>{
     console.log(req.headers)
     console.log(req.ips)
     console.log(req.connection.remoteAddress)
-    const data= <div>${req.headers}</div>
-    res.json(data)
+    const headers = req.headers
+    let data='<div>'
+
+    for (met in headers){
+        data+=`${met}:${headers[met]} <br\>`
+    }
+
+    res.send(data).end()
 })
 
 
