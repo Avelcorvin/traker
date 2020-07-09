@@ -11,7 +11,11 @@ app.get('/',(req,res)=>{
     console.log(req.headers)
     console.log(req.ips)
     console.log(req.connection.remoteAddress)
-    res.json(req.ip)
+    res.json({
+        ip:req.ip,
+        ips:req.ips,
+        headres:req.headers
+    })
 })
 
 
