@@ -1,21 +1,26 @@
-const express =  require('express')
-const app = express()
-const port = process.env.PORT|| 3000
+const express = require('express')
+const  app = express()
+const port = process.env.PORT || 3000;
+const fs = require('fs')
+const FILEPATH='publick/index.html';
+const engi1 = require('./engine/engine')
+
 
 
 app.enable('trust proxy')
 app.use(express.static('publick'));
+app.engine('eeng',engi1)
+app.set('views', './view') // specify the views directory
+app.set('view engine', 'eeng') // register the template engine
 
-
-app.post('/',(req,res)=>{
-    const headers = req.headers
-    let data='<div>'
-    for (met in headers){
-        data+=`${met}:${headers[met]} <br\>`
-    }
-    res.send(data)
+app.get('/',(req,res)=>{
+    res.render('index',{text:"title",value:"Zagolovok"})
 })
+
+
 app.listen(
-    port,(req,res)=>{
-    console.log('server is start')
-})
+    port, (req, res) => {
+        console.log('server is start')
+    })
+
+module.exports=app;
