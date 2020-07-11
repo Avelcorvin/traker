@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sastocss": "sass --watch sass/style.scss publick/css/style.css",
     "start": "nodemon app.js",
-    "dev": "concurrently \" npm run start\" \" npm run sastocss\""
+    "client":"cd client && npm run start ",
+    "dev": "concurrently \" npm run start\" \" npm run sastocss\" \" npm run client\""
   },
   "author": "",
   "license": "ISC",
