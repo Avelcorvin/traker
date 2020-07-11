@@ -1,0 +1,33 @@
+ const data = [
+    {
+        id:1,
+        ip:"21.000.124",
+        name:"marry",
+        data:"21.02"
+    },
+    {
+        id:2,
+        ip:"21.000.124",
+        name:"marry",
+        data:"21.02"
+    },
+    {
+        id:3,
+        ip:"21.000.124",
+        name:"Godzha",
+        data:"21.02"
+    },
+    {
+        id:4,
+        ip:"21.000.124",
+        name:"Gena",
+        data:"21.02"
+    },
+    {
+        id:5,
+        ip:"21.000.124",
+        name:"alex",
+        data:"21.02"
+    }
+]
+module.exports=data

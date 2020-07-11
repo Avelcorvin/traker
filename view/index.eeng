@@ -6,43 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hellosa</title>
     <link rel="stylesheet" href="css/style.css">
-
     <!-- <script defer src="scripts/index.js"></script> -->
 </head>
 
 <body>
-    <!-- header -->
     <header>
-        <div class="section-header section-outer">
-            <div class="section-inner"> Header</div>
-        </div>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Logo</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">JavaScript</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <!-- header -->
 
-    <section>
-        <aside>
-            <div class="section-navbar section-outer">
-                <div class="section-inner">
-                    navbar
-                    <ul class="section-navbar-menu">
-                        <li class="section-navbar-menu_element"></li>
-                        <li class="section-navbar-menu_element"></li>
-                        <li class="section-navbar-menu_element"></li>
-                        <li class="section-navbar-menu_element"></li>
-                        <li class="section-navbar-menu_element"></li>
-                    </ul>
-                    
-                 </div>
+
+    <main class="main">
+        <div class="main-wrapper">
+            <div class="main-left-block  indigo lighten-5">
+                
+                <ul class="collection">
+                    left block
+                    <li class="collection-item">Кампания 1</li>
+                    <li class="collection-item">Alvin</li>
+                    <li class="collection-item">Alvin</li>
+                    <li class="collection-item">Alvin</li>
+                  </ul>
             </div>
-        </aside>
-        <div class="section-content section-outer">
-            <div class="section-inner"> content
-                <div class="ection-content-header">header</div>
-                <div class="ection-content-tannle">table</div>
+
+            <div class="main-right-block  indigo lighten-5">
+                right block
+                <ul class="main-right-block-content collection" >
+                    <li class="collection-item">Дата</li>
+                    <li class="collection-item">User Agent</li>
+                    <li class="collection-item">ip</li>
+                    <li class="collection-item">referer</li>    
+                </ul>
+                    #main-right-block-content collection#
+                 
+                </ul>
             </div>
         </div>
-    </section>
+    </main>
 
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
+                        content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
