@@ -1,27 +1,12 @@
 const express = require('express')
-const  app = express()
-const port = process.env.PORT || 5000;
-const fs = require('fs')
-const FILEPATH='publick/index.html';
-// const engi1 = require('./engine/engine')
+const app = express()
 const data = require('./data')
+const mongoose = require('./mongoose/mongoose')
 
-
-app.enable('trust proxy')
-app.use(express.static('publick'));
-// app.engine('eeng',engi1)
-// app.set('views', './view') // specify the views directory
-// app.set('view engine', 'eeng') // register the template engine
-
-app.get('/',(req,res)=>{
-
-    res.json(data)
-})
-
-
-app.listen(
-    port, (req, res) => {   
-        console.log('server is start')
-    })
-
+//constans
+const port = 5000;
+app.use(express.json()) // for parsing application/json
+app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+app.use('/api/',require('./routers/api.router.js'))
+app.listen(port,(req, res) => console.log('server is start'))
 module.exports=app;

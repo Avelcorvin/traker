@@ -1,0 +1,5 @@
+    Работа с компанией
+POST /api/getdata       создание кампании
+PUT /api/getdata        изменение кампании
+GET /api/getdata        получить данные по компании
+DELETE /api/getdata     удаление кампании

@@ -10,11 +10,13 @@ export const useHttp = () => {
             BODY=JSON.stringify(BODY)
             HEAD={
                 ...HEAD,
-                "content-type": "application/json; charset=utf-8"}
+                "content-type": "application/json; charset=utf-8"
+            }
         }
         const fetchBody = {
             method:meth,
             body:BODY,
+            headers:HEAD,
         }
         console.log(fetchBody)
 
