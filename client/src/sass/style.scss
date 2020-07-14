@@ -1,0 +1,44 @@
+@import 'materialize';
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  .main {
+    flex: 1 0 auto;
+  
+    .main-wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        min-height: 66.4vh;
+    }
+    &-left-block{
+        flex-basis: 20%;
+        padding: 5px;
+        .collection{
+         min-height: 62vh;   
+        }
+    }
+    &-right-block{
+        
+        flex-grow: 1;
+        padding: 5px;
+
+        &-content{
+            display: flex;
+            justify-content: left;
+            .collection-item{
+                min-width: 8vw;
+                border-right: solid black 1px;
+                &:last-child{
+                    border: none;
+                }
+            }
+        }
+    }
+  }

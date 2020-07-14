@@ -30,4 +30,4 @@
         data:"21.02"
     }
 ]
-module.exports=data
+module.exports = data
