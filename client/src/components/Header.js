@@ -1,17 +1,19 @@
 import React from 'react'
-export const Header = ()=>{
-    return(
+import { Link } from 'react-router-dom'
+export const Header = () => {
+    return (
         <header>
-        <nav>
-            <div className="nav-wrapper">
-                <a href="#" className="brand-logo">Главная</a>
-                <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li><a href="sass.html">Кампании</a></li>
-                    <li><a href="sass.html">Статистика</a></li>
-                    <li><a href="badges.html">Настройки Кампании</a></li>
-                    <li><a href="collapsible.html"> Помощь</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    )}
+            <nav>
+                <div className="nav-wrapper">
+                    <Link to="/" className="brand-logo"> Главная </Link>
+                    <ul id="nav-mobile" className="right hide-on-med-and-down">
+                        <li><Link to="/create-campaing"> Создать кампанию </Link></li>
+                        <li><Link to="/campaing-config"> Настройки Кампании </Link></li>
+                        <li><Link to="/statistick"> Статистика </Link></li>
+                        <li><Link to="/help"> Помощь </Link></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    )
+}
