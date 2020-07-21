@@ -8,6 +8,13 @@ body {
     min-height: 100vh;
     flex-direction: column;
   }
+  .nav-wrapper{
+      padding: 0 2vw;
+  }
+
+
+
+
   .main {
     flex: 1 0 auto;
   
@@ -41,4 +48,26 @@ body {
             }
         }
     }
+  }
+  .campain{
+      display: flex;
+      &-wrapper-create_block{
+        border: solid black 1px;
+        flex-basis: 30%;
+      }
+      &-wrapper-info_block{
+          border: solid black 1px;
+          margin-left: 25px ;
+          min-width: 30vw;
+          flex-shrink: 1;
+    }
+  }
+  #modal-window-wrapper{
+      position: absolute;
+      top: 150px;
+      left: 650px;
+      height: 150px;
+      width: 150px;
+      z-index: 1000;
+      background-color:red ;
   }

@@ -1,8 +1,8 @@
 import React from 'react'
 export const Footer = () => {
     return (
-        <footer className="page-footer">
-            <div className="container">
+        <footer className="page-footer green darken-4">
+            <div className=" container">
                 <div className="row">
                     <div className="col l6 s12">
                         <h5 className="white-text">Footer Content</h5>
