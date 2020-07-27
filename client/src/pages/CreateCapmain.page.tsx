@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import { useHttp } from '../hooks/http.hooks'
 
 
-export const CreateCapmain = () => {
+
+const CreateCapmain = () => {
 //constants
-const url="http://localhost:5000/link/t"
+const url:string="http://localhost:5000/link/t"
 //hooks
     const[state,setState] =  useState({
         "campaing-name":"",
@@ -13,14 +14,14 @@ const url="http://localhost:5000/link/t"
     })
     const {request} = useHttp()
 //handlers
-    const formHandler = (EO) => {
+    const formHandler = (EO:any) => {
        EO.preventDefault()
        request("/api/getdata","POST",state)
     }
 
 
 
-    const inputHandler = (EO)=>{
+    const inputHandler = (EO:any)=>{
         setState({
             ...state,
             [EO.target.name]:EO.target.value
@@ -72,3 +73,6 @@ const url="http://localhost:5000/link/t"
         </div>
     )
 }
+
+
+export default CreateCapmain;

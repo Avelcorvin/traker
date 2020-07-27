@@ -5,12 +5,16 @@ import { connect } from 'react-redux'
 import { Login } from '../pages/Login.page'
 
 
-export const Component = (props) => {
+interface stateType{
+    isLogin:boolean
+}
+
+const Component = (props:stateType):JSX.Element => {
     const {isLogin}=props;
     console.log("props:",props)
     let content= <Login/>
 
-    if(isLogin)
+    if(!isLogin)
         content =<><LeftMenu /><Content /></>
     return (
         <main className="main">
@@ -21,7 +25,7 @@ export const Component = (props) => {
     )
 } 
 
-const mapStateToProps= (state)=>({
+const mapStateToProps= (state:stateType)=>({
             isLogin:state.isLogin
 
 })

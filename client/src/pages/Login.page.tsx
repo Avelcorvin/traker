@@ -1,12 +1,23 @@
 import React, { useState } from 'react'
 
 
-export const Login = () => {
-const [pasword,setPasword]=useState(null);
-const [email,setEmail]=useState(null);
 
-console.log(pasword,email)
-const inputHandler=(EO)=>{
+
+
+
+export const Login:React.FC = () => {
+const [pasword,setPasword]=useState('');
+const [email,setEmail]=useState('');
+
+interface objEO{
+  target:{
+    id:string;
+    value:string;
+  }
+}
+
+const inputHandler=(EO:objEO)=>{
+  const Enent= EO.target;
   switch (EO.target.id) {
     case "password":setPasword(EO.target.value)
       break;
@@ -14,9 +25,7 @@ const inputHandler=(EO)=>{
       break;
     default:
       return;
-  }
-}
-const 
+  }}
 
   return (
 

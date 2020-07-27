@@ -1,7 +1,8 @@
 import React from 'react'
-export const MainPage = () => {
+const MainPage = ():any => {
     return (
         <div className="main-page" >
             MainPage
         </div>
     )}
+export default MainPage;

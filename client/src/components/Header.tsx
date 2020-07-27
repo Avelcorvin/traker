@@ -1,15 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { urlQueryParametrs } from '../redux/reducers/links.reducer'
 
 
 
-export const Component =(props) => {
+
+
+export const Component = (props:{url:string;}):JSX.Element => {
     let queryName=''
-    const {url} = props
-    if(url){
-            queryName=`?campaing=${url}`;
-        }
+    const {url} = props;
+    if(url)queryName=`?campaing=${url}`;
     console.log('url',url)  
     
 
@@ -27,12 +28,12 @@ export const Component =(props) => {
                     </ul>
                 </div>
             </nav>
-        </header>
-    )
+        </header>)
+    
 }
 
 
-const mapStateToprops =state=>({
+const mapStateToprops = (state:{urlQueryParametrs:string})=>({
     url:state.urlQueryParametrs  
 })
-export const Header =connect(mapStateToprops)(Component) 
+export const Header =connect(mapStateToprops)(Component); 

@@ -1,17 +1,16 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import { CreateCapmain } from '../pages/CreateCapmain'
-import { Statistick } from '../pages/Statisitck'
-import { CapmainConfig } from '../pages/CampainConfigs'
-import { Help } from '../pages/Help'
-import { MainPage } from '../pages/MainPage'
+import CreateCapmain from '../pages/CreateCapmain.page'
+import  Statistick  from '../pages/Statisitck.page'
+import CampainConfigs from '../pages/CampainConfigs.page'
+import Help from '../pages/Help.page'
+import  MainPage  from '../pages/MainPage.page'
 import { Login } from '../pages/Login.page'
-// import { Reidreckt } from './Redireckt'
 
 
 
-export const Content = () => {
-    return (
+export const Content = ():JSX.Element => {
+    return (    
         <div className="main-right-block  indigo lighten-5">
             <Switch>
                 <Route exact path="/">
@@ -23,7 +22,7 @@ export const Content = () => {
                 </Route>
 
                 <Route path="/campaing-config">
-                    <CapmainConfig />
+                <CampainConfigs/>
                 </Route>
 
                 <Route path="/statistick">

@@ -1,5 +1,5 @@
 import React  from 'react'
-export const Statistick = () => {
+const Statistick = ():any => {
     return (
         <div className="main-right-block  indigo lighten-5">
             right block
@@ -12,3 +12,5 @@ export const Statistick = () => {
             #main-right-block-content collection#
         </div>
 )}
+
+export default Statistick;

@@ -2,9 +2,11 @@
 
 
 
+
+
 export const useHttp = () => {
-    const request = async (URI,meth="GET",BODY={},HEAD={}) => {
-    let fetchBody={};
+    const request = async (URI:string,meth:string="GET",BODY={},HEAD={}) => {
+    let fetchBody:any={};
     try {
         if(BODY){
             BODY=JSON.stringify(BODY)
@@ -15,6 +17,7 @@ export const useHttp = () => {
         }
         if(meth==='GET'){
             fetchBody.method=meth;
+            console.log("fetchBody",fetchBody)
         }
         if(meth==='POST'){
             fetchBody.method=meth;
@@ -22,9 +25,9 @@ export const useHttp = () => {
             fetchBody.headers=HEAD;
         }
         const response = await fetch(URI,fetchBody )
-        console.log(response)
+        // console.log(response)
         const data = await response.json()
-        console.log(data)
+        // console.log(data)
         return data;
     } catch (error) {
     }

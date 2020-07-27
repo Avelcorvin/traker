@@ -1,7 +1,13 @@
 import React from 'react'
-export const Help = () => {
+
+
+
+
+const Help = ():any => {
     return (
         <div className="help" >
             Help
         </div>
     )}
+
+export default Help;

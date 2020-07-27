@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React  from 'react';
 import {BrowserRouter} from 'react-router-dom'
 import  {createStore} from 'redux' 
 import {Provider} from 'react-redux'
@@ -8,14 +8,15 @@ import { Main } from './components/Main';
 import './css/style.css'
 import  {mainReducer}  from './redux/reducers';
 
-
-const store =createStore(mainReducer)
+  
+const store=createStore(mainReducer)
 console.log(store.getState())
 
+
+
+
+
 function App() {
-  useEffect(()=>{
-    
-  })
   return ( 
     <Provider store={store}>
     <div className="App">

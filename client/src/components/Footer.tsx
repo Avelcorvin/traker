@@ -1,5 +1,8 @@
-import React from 'react'
-export const Footer = () => {
+import React from 'react';
+
+
+
+export const Footer = ():JSX.Element => {
     return (
         <footer className="page-footer green darken-4">
             <div className=" container">
